@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Information</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>COVID-19 Information</h1>
+
+    <!-- The registration form, comments, and the previous patient form remain the same -->
+    
+    <form action="patients.php" method="POST" onsubmit="addPatient(event)">
+        <h2>Add Patient</h2>
+        <input type="text" name="patient_name" placeholder="Patient Name" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="text" name="condition" placeholder="Condition" required>
+        <button type="submit">Add Patient</button>
+    </form>
+
+    <div id="patientList">
+        <h2>Patients Information</h2>
+        <!-- Newly added patients will be displayed here -->
+        <!-- Example: <div class="patientInfo">Patient 1 - Age: 30 - Condition: Fever</div> -->
+    </div>
+
+    <!-- Test Cases Section -->
+    <div id="testCases">
+        <h2>Test Cases</h2>
+        <button onclick="runTestCases()">Run Test Cases</button>
+        <p id="testResults"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
